@@ -2,7 +2,7 @@
     <button class="dropbtn">Escolha o seu Super!</button>
     <div class="dropdown-content">
       <ng-container *ngFor="let array of dataNames;">
-        <a  *ngFor="let characters of array;">{{characters.name}}</a>
+        <a  *ngFor="let characters of array;" (click)="getInfos(characters.id)">{{characters.name}}</a>
       </ng-container>
       <ng-container *ngIf="!loader">
         <a (click)="getMoreCharacters()" style="color:#EC1D24; font-weight: bold;">Ver mais</a>

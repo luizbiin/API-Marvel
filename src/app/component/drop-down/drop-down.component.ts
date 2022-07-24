@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { DropDownService } from './drop-down.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { DropDownService } from './drop-down.service';
 })
 export class DropDownComponent implements OnInit {
 
-  constructor(private dropDownService: DropDownService) { }
+  constructor(private dropDownService: DropDownService, private router: Router) { }
   public offset: number = 0
   public dataNames: any = [];
   public loader: boolean = true
@@ -29,6 +30,10 @@ export class DropDownComponent implements OnInit {
     }
     )
   } 
+
+  public getInfos(id: any){      
+    this.router.navigate(["infos/"+id])   
+  }
 
   public getMoreCharacters(){  
     this.loader = true 
