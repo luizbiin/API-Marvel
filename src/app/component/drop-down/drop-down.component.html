@@ -1,0 +1,14 @@
+<div class="dropdown">
+    <button class="dropbtn">Escolha o seu Super!</button>
+    <div class="dropdown-content">
+      <ng-container *ngFor="let array of dataNames;">
+        <a  *ngFor="let characters of array;">{{characters.name}}</a>
+      </ng-container>
+      <ng-container *ngIf="!loader">
+        <a (click)="getMoreCharacters()" style="color:#EC1D24; font-weight: bold;">Ver mais</a>
+      </ng-container>
+      <div *ngIf="loader" class="loading001">
+        <div class="loading001__circle"></div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,8 @@
+<div class="body">
+    <form #login="ngForm" class="body__login">
+        <label>Senha, Vingador mais forte:</label>
+        <input type="text" name="password" ngModel/>
+        <button type="submit" class="body__login__button" (click)=validate(login.value)>Entrar</button>
+        <label *ngIf="erro" style="margin-top: 10px">vish, coitados de nós, tente novamente...dica (é verde)</label>
+    </form>
+</div>

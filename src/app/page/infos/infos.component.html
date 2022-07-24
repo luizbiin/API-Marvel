@@ -1,0 +1,20 @@
+<div class="home">
+    <app-back-button [page]="'home'"></app-back-button>   
+    <app-loader  *ngIf="loader"></app-loader>
+    <div class="home__img" *ngIf="!loader">    
+        <img class="home__img__src" src="{{dataChap.thumbnail.path}}.{{dataChap.thumbnail.extension}}">
+    </div>
+    
+    <div class="home__infos">
+       <ul class="home__infos__comics"><span>Quantidade de Comics: {{dataChap.comics.available}}</span>
+        <li *ngFor="let item of dataChap.comics.items">{{item.name}}</li></ul>      
+
+        <ul class="home__infos__series"><span>Quantidade de Series: {{dataChap.series.available}}</span>
+            <li *ngFor="let item of dataChap.series.items">{{item.name}}</li></ul>
+
+        <ul class="home__infos__stories"><span>Quantidade de Histórias: {{dataChap.stories.available}}</span>
+            <li *ngFor="let item of dataChap.stories.items">{{item.name}}</li></ul>
+    </div>
+
+</div>
+

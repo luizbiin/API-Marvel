@@ -1,0 +1,45 @@
+@import './../../../theme';
+
+.search{
+    display: flex;
+    align-items: center;
+    margin: 20px 0px;
+
+    form{
+        width: 100%;
+        display: flex;
+    }
+
+    &__input{
+        border-radius: 5px;
+        width: 100%;
+        height: 22px;
+        &::placeholder {
+            color: $border;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            font-size: 15px;
+            font-style: normal;
+            font-variant-ligatures: normal;
+            font-variant-caps: normal;
+            font-variant-numeric: normal;
+            font-variant-east-asian: normal;
+            font-weight: 400;
+            font-stretch: normal;
+            font-size: 18px;
+            line-height: 1.3;
+            font-family: Roboto, "Trebuchet MS", Helvetica, Arial, sans-serif;
+            letter-spacing: .5px;
+        }
+    }
+
+    &__icon{
+        cursor: pointer;
+        width: 19px;
+        height: 17px;
+        padding: 5px;
+        stroke: $white;
+        margin-left: 5px;
+    }
+}

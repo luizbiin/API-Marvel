@@ -1,0 +1,24 @@
+@import './../../../theme';
+
+.loading001 {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 80px;
+
+    @keyframes spinning {
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    &__circle {
+        animation: spinning 2s infinite linear;
+        border: 5px solid $grayText;
+        border-radius: 50%;
+        border-top-color: $red;
+        height: 200px;
+        width: 200px;
+    
+    }
+}
